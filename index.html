@@ -37,7 +37,7 @@
 
   <!-- INFO BAR -->
   <div class="info-bar">
-    Call us at <a href="tel:262-628-9211">262-628-9211</a> to place an order &mdash; Food ready in approximately 15 minutes!
+    Call us at <a href="tel:262-628-9211">262-628-9211</a> to place an order<br>Food ready in approximately 15 minutes!
   </div>
 
   <!-- HERO -->
@@ -177,6 +177,11 @@
       const cards = Array.from(layout.querySelectorAll('.special-card'));
       const todayCard = cards.find(c => c.dataset.day == today);
       const otherCards = cards.filter(c => c.dataset.day != today);
+      otherCards.sort((a, b) => {
+        const dayA = (parseInt(a.dataset.day) - today + 7) % 7;
+        const dayB = (parseInt(b.dataset.day) - today + 7) % 7;
+        return dayA - dayB;
+      });
       layout.innerHTML = '';
       const topRow = document.createElement('div');
       topRow.className = 'specials-row specials-row--today';
