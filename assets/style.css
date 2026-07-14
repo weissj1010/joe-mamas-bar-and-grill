@@ -99,6 +99,9 @@ nav .order-btn:hover {
   color: var(--white);
 }
 
+/* Mobile order button (hidden on desktop) */
+.order-btn-mobile { display: none; }
+
 /* Mobile menu toggle */
 .menu-toggle {
   display: none;
@@ -851,6 +854,22 @@ footer {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .header-inner { justify-content: space-between; }
+  .logo { flex: 1; min-width: 0; }
+  .order-btn-mobile {
+    display: inline-block;
+    background: var(--red);
+    color: var(--white);
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+  }
+  .order-btn-mobile:hover { background: #e74c3c; color: var(--white); }
+  .menu-toggle { display: block; }
   nav ul { display: none; }
   nav ul.open {
     display: flex;
@@ -865,11 +884,30 @@ footer {
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   }
   nav ul.open a { display: block; text-align: center; }
-  .menu-toggle { display: block; }
 
-  .hero { padding: 60px 20px; min-height: auto; }
+  .hero { padding: 60px 15px; min-height: auto; }
+  .hero-content { padding-top: 40px; }
   .hero-content h1 { font-size: 2.2rem; }
   .hero-content p { font-size: 1.1rem; }
+
+  /* Specials cards - stack on mobile */
+  .specials-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .specials-row .special-card {
+    flex: 0 0 calc(33.333% - 8px);
+    min-width: 0;
+  }
+  .specials-row--today .special-card {
+    width: 100%;
+    max-width: 100%;
+  }
+  .special-card .item { white-space: normal; }
+  .special-card .price { white-space: normal; }
+
+  .hero-buttons { flex-direction: column; align-items: center; gap: 10px; }
+  .hero-buttons .btn { width: 100%; max-width: 280px; text-align: center; }
 
   .contact-grid { grid-template-columns: 1fr; }
   .menu-photos { grid-template-columns: 1fr; }
@@ -889,5 +927,13 @@ footer {
   .hero-content h1 { font-size: 1.8rem; }
   .btn { padding: 12px 24px; font-size: 0.9rem; }
   .specials-grid { grid-template-columns: 1fr; }
+
+  .specials-row .special-card {
+    flex: 0 0 calc(50% - 6px);
+  }
+  .special-card { padding: 10px 8px; }
+  .special-card .day { font-size: 1rem; }
+  .special-card .item { font-size: 0.8rem; }
+  .special-card .price { font-size: 0.85rem; }
 }
 
