@@ -123,12 +123,14 @@ nav .order-btn:hover {
 
 /* ===== HERO ===== */
 .hero {
-  position: relative;
   background: linear-gradient(rgba(30,42,58,0.85), rgba(30,42,58,0.9)), url('images/sunset.jpg') center/cover no-repeat;
   color: var(--white);
   text-align: center;
+  display: flex;
+  flex-direction: column;
   height: calc(100vh - 120px);
   height: calc(100dvh - 120px);
+  overflow: hidden;
 }
 
 .hero-content {
@@ -171,13 +173,11 @@ nav .order-btn:hover {
   margin-bottom: 10px;
 }
 
-/* Hero carousel — absolute with hard bottom boundary, overflow clips content */
+/* Hero carousel — flex child that shrinks + clips overflow */
 .hero-carousel {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 80px;
+  position: relative;
+  flex: 1 1 0%;
+  min-height: 0;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -231,22 +231,18 @@ nav .order-btn:hover {
   to { transform: translateX(0); opacity: 1; }
 }
 
-/* Button + dots — positioned in the reserved 80px zone at bottom */
+/* Button + dots — in flex flow, cannot overlap carousel */
 .hero-buttons {
-  position: absolute;
-  bottom: 30px;
-  left: 0;
-  right: 0;
+  flex: 0 0 auto;
+  padding: 10px 0;
   display: flex;
   gap: 15px;
   justify-content: center;
 }
 
 .hero-dots {
-  position: absolute;
-  bottom: 8px;
-  left: 0;
-  right: 0;
+  flex: 0 0 auto;
+  padding: 0 0 12px;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -353,7 +349,7 @@ nav .order-btn:hover {
 
 /* Feature rotator - single glass card with cycling content */
 .feature-rotator {
-  display: grid;
+  position: relative;
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -364,14 +360,19 @@ nav .order-btn:hover {
   flex-shrink: 0;
   margin: 0 auto;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  overflow: hidden;
 }
 .feature-rotator-item {
-  grid-area: 1 / 1;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  padding: 30px 28px;
   opacity: 0;
   transition: opacity 0.8s ease;
   pointer-events: none;
 }
 .feature-rotator-item.active {
+  position: relative;
+  padding: 0;
   opacity: 1;
   pointer-events: auto;
 }
@@ -894,11 +895,9 @@ footer {
   .info-bar-dash { display: none; }
 
   .hero { height: calc(100vh - 120px); height: calc(100dvh - 120px); }
-  .hero-carousel { padding: 0 10px; bottom: 90px; }
+  .hero-carousel { padding: 0 10px; }
   .hero-content { padding-top: 5px; }
-  .hero-buttons { bottom: 35px; }
   .hero-buttons .btn { padding: 10px 24px; }
-  .hero-dots { bottom: 10px; }
   .specials-layout { max-width: 100%; overflow: hidden; gap: 8px; }
   .specials-row--today { justify-content: center; margin-bottom: 0; }
   .specials-row { gap: 6px; }
