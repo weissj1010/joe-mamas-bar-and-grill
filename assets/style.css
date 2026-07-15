@@ -910,6 +910,20 @@ footer {
   .special-card .item { white-space: normal; }
   .special-card .price { white-space: normal; }
 
+  .feature-rotator {
+    position: relative;
+    padding: 20px 18px;
+    min-height: 160px;
+  }
+  .feature-rotator-item {
+    position: absolute;
+    top: 20px;
+    left: 18px;
+    right: 18px;
+  }
+  .feature-rotator-item h3 { font-size: 1.15rem; margin-bottom: 8px; }
+  .feature-rotator-item p { font-size: 0.9rem; line-height: 1.5; }
+
   .hero-buttons { flex-direction: column; align-items: center; gap: 10px; }
   .hero-buttons .btn { width: 100%; max-width: 280px; text-align: center; }
 
