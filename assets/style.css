@@ -899,11 +899,11 @@ footer {
   .info-bar-dash { display: none; }
 
   .hero { height: calc(100vh - 120px); height: calc(100dvh - 120px); }
-  .hero-carousel { padding: 0 10px; bottom: 110px; }
+  .hero-carousel { padding: 15px 10px 0; bottom: 140px; align-items: flex-start; }
   .hero-content { padding-top: 5px; }
-  .hero-buttons { bottom: 45px; }
+  .hero-buttons { bottom: 70px; }
   .hero-buttons .btn { padding: 10px 24px; }
-  .hero-dots { bottom: 15px; }
+  .hero-dots { bottom: 40px; }
   .specials-layout { max-width: 100%; overflow: hidden; gap: 8px; }
   .specials-row--today { justify-content: center; margin-bottom: 0; }
   .specials-row { gap: 6px; }
