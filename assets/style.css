@@ -295,6 +295,8 @@ nav .order-btn:hover {
 }
 .info-bar a { color: var(--navy); font-weight: 800; }
 .info-bar a:hover { color: var(--dark); }
+.info-bar-dash { }
+.info-bar-break { display: none; }
 
 /* ===== SECTIONS ===== */
 .section {
@@ -870,6 +872,7 @@ footer {
 
   .info-bar { font-size: 0.8rem; padding: 10px 15px; }
   .info-bar-break { display: block; }
+  .info-bar-dash { display: none; }
 
   .hero { padding: 10px 10px 8px; min-height: calc(100vh - 120px); min-height: calc(100dvh - 120px); justify-content: center !important; }
   .hero-content { padding-top: 5px; }
