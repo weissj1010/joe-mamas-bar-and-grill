@@ -370,7 +370,7 @@ nav .order-btn:hover {
   top: 0;
   left: 0;
   right: 0;
-  padding: 30px 28px;
+  padding: 18px 22px;
   opacity: 0;
   transition: opacity 0.8s ease;
   pointer-events: none;
@@ -936,7 +936,7 @@ footer {
   .special-card .price { white-space: normal; }
 
   .feature-rotator-item {
-    padding: 20px 18px;
+    padding: 14px 16px;
   }
   .feature-rotator-item h3 { font-size: 1.15rem; margin-bottom: 8px; }
   .feature-rotator-item p { font-size: 0.9rem; line-height: 1.5; }
