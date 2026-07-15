@@ -353,25 +353,30 @@ nav .order-btn:hover {
 
 /* Feature rotator - single glass card with cycling content */
 .feature-rotator {
-  display: grid;
+  position: relative;
+  overflow: hidden;
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255,255,255,0.2);
   border-radius: 14px;
-  padding: 30px 28px;
   max-width: 500px;
   flex-shrink: 0;
   margin: 0 auto;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 .feature-rotator-item {
-  grid-area: 1 / 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 28px;
   opacity: 0;
   transition: opacity 0.8s ease;
   pointer-events: none;
 }
 .feature-rotator-item.active {
+  position: relative;
   opacity: 1;
   pointer-events: auto;
 }
@@ -894,11 +899,11 @@ footer {
   .info-bar-dash { display: none; }
 
   .hero { height: calc(100vh - 120px); height: calc(100dvh - 120px); }
-  .hero-carousel { padding: 0 10px; bottom: 90px; }
+  .hero-carousel { padding: 0 10px; bottom: 110px; }
   .hero-content { padding-top: 5px; }
-  .hero-buttons { bottom: 35px; }
+  .hero-buttons { bottom: 45px; }
   .hero-buttons .btn { padding: 10px 24px; }
-  .hero-dots { bottom: 10px; }
+  .hero-dots { bottom: 15px; }
   .specials-layout { max-width: 100%; overflow: hidden; gap: 8px; }
   .specials-row--today { justify-content: center; margin-bottom: 0; }
   .specials-row { gap: 6px; }
@@ -930,7 +935,7 @@ footer {
   .special-card .item { white-space: normal; }
   .special-card .price { white-space: normal; }
 
-  .feature-rotator {
+  .feature-rotator-item {
     padding: 20px 18px;
   }
   .feature-rotator-item h3 { font-size: 1.15rem; margin-bottom: 8px; }
