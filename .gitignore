@@ -3,3 +3,5 @@
 joes.pen
 node_modules/
 .vercel
+._*
+*.bak
