@@ -131,7 +131,7 @@ nav .order-btn:hover {
   height: calc(100vh - 120px);
   height: calc(100dvh - 120px);
   display: grid;
-  grid-template-rows: 1fr auto auto;
+  grid-template-rows: minmax(0, 1fr) auto auto;
   justify-items: center;
   overflow: hidden;
 }
@@ -182,6 +182,7 @@ nav .order-btn:hover {
   width: 100%;
   z-index: 2;
   align-self: center;
+  overflow: hidden;
 }
 
 .hero-slide {
@@ -194,8 +195,13 @@ nav .order-btn:hover {
   display: flex;
 }
 
-.hero-slide.swipe-out-left {
+.hero-slide.swipe-out-left,
+.hero-slide.swipe-out-right {
+  position: absolute;
+  top: 0; left: 0; right: 0;
   display: flex;
+}
+.hero-slide.swipe-out-left {
   animation: slideOutLeft 0.35s ease forwards;
 }
 .hero-slide.swipe-in-right {
@@ -203,7 +209,6 @@ nav .order-btn:hover {
   animation: slideInRight 0.35s ease forwards;
 }
 .hero-slide.swipe-out-right {
-  display: flex;
   animation: slideOutRight 0.35s ease forwards;
 }
 .hero-slide.swipe-in-left {
