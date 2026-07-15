@@ -894,11 +894,11 @@ footer {
   .info-bar-dash { display: none; }
 
   .hero { height: calc(100vh - 120px); height: calc(100dvh - 120px); }
-  .hero-carousel { padding: 0 10px; bottom: 70px; }
+  .hero-carousel { padding: 0 10px; bottom: 90px; }
   .hero-content { padding-top: 5px; }
-  .hero-buttons { bottom: 25px; }
+  .hero-buttons { bottom: 35px; }
   .hero-buttons .btn { padding: 10px 24px; }
-  .hero-dots { bottom: 5px; }
+  .hero-dots { bottom: 10px; }
   .specials-layout { max-width: 100%; overflow: hidden; gap: 8px; }
   .specials-row--today { justify-content: center; margin-bottom: 0; }
   .specials-row { gap: 6px; }
