@@ -900,12 +900,11 @@ footer {
 
   .hero { height: calc(100vh - 120px); height: calc(100dvh - 120px); }
   .hero-carousel { padding: 15px 10px 0; bottom: 160px; align-items: flex-start; }
-  .hero-slide { max-height: 100%; overflow: hidden; }
-  .hero-content { padding-top: 5px; }
+  .hero-content { padding-top: 5px; max-height: calc(100dvh - 300px); overflow: hidden; }
   .hero-buttons { bottom: 20px; }
   .hero-buttons .btn { padding: 10px 24px; }
   .hero-dots { bottom: 2px; }
-  .specials-layout { max-width: 100%; overflow: hidden; gap: 8px; }
+  .specials-layout { max-width: 100%; gap: 8px; }
   .specials-row--today { justify-content: center; margin-bottom: 0; }
   .specials-row { gap: 6px; }
   .special-card { padding: 10px 8px; }
