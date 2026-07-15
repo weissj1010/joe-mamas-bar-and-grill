@@ -178,7 +178,7 @@ nav .order-btn:hover {
   left: 0;
   right: 0;
   bottom: 80px;
-  overflow: hidden;
+  overflow: clip;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -899,11 +899,12 @@ footer {
   .info-bar-dash { display: none; }
 
   .hero { height: calc(100vh - 120px); height: calc(100dvh - 120px); }
-  .hero-carousel { padding: 15px 10px 0; bottom: 140px; align-items: flex-start; }
+  .hero-carousel { padding: 15px 10px 0; bottom: 160px; align-items: flex-start; }
+  .hero-slide { max-height: 100%; overflow: hidden; }
   .hero-content { padding-top: 5px; }
-  .hero-buttons { bottom: 70px; }
+  .hero-buttons { bottom: 20px; }
   .hero-buttons .btn { padding: 10px 24px; }
-  .hero-dots { bottom: 40px; }
+  .hero-dots { bottom: 2px; }
   .specials-layout { max-width: 100%; overflow: hidden; gap: 8px; }
   .specials-row--today { justify-content: center; margin-bottom: 0; }
   .specials-row { gap: 6px; }
