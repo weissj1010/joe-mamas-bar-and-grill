@@ -28,6 +28,7 @@
           <li><a href="specials.html">Daily Specials</a></li>
           <li><a href="https://onlineordering.rmpos.com/Order/?wci=3OLl6gTd" target="_blank" class="order-btn">Order Online</a></li>
           <li><a href="drinks.html">Drink Menu</a></li>
+          <li><a href="catering.html">Catering</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -37,84 +38,121 @@
 
   <!-- INFO BAR -->
   <div class="info-bar">
-    Call us at <a href="tel:262-628-9211">262-628-9211</a> to place an order<br>Food ready in approximately 15 minutes!
+    Call us at <a href="tel:262-628-9211">262-628-9211</a> to place an order. <span class="info-bar-break"></span>Food ready in approximately 15 minutes!
   </div>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-content">
-      <div class="specials-layout" id="specials-layout">
-        <div class="special-card" data-day="0">
-          <div class="day">Sunday</div>
-          <div class="item">Baby Back Ribs</div>
-          <div class="price">From $21.95</div>
-        </div>
-        <div class="special-card" data-day="1">
-          <div class="day">Monday</div>
-          <div class="item">12 Jumbo Wings</div>
-          <div class="price">$10.95</div>
-        </div>
-        <div class="special-card" data-day="2">
-          <div class="day">Tuesday</div>
-          <div class="item">Mama's Taco Platter</div>
-          <div class="price">$14.95</div>
-        </div>
-        <div class="special-card" data-day="3">
-          <div class="day">Wednesday</div>
-          <div class="item">Smash Burger of the Day</div>
-          <div class="price">Market Price</div>
-        </div>
-        <div class="special-card" data-day="4">
-          <div class="day">Thursday</div>
-          <div class="item">Joe Joe's Fried Chicken</div>
-          <div class="price">$16.95</div>
-        </div>
-        <div class="special-card" data-day="5">
-          <div class="day">Friday</div>
-          <div class="item">Fish Fry</div>
-          <div class="price">From $18.95</div>
-        </div>
-        <div class="special-card" data-day="6">
-          <div class="day">Saturday</div>
-          <div class="item">Prime Rib Au Jus</div>
-          <div class="price">From $31.95</div>
-        </div>
-      </div>
-      <div class="hero-buttons" style="margin-top:30px;">
-        <a href="specials.html" class="btn btn-primary">See Full Specials</a>
-        <a href="https://onlineordering.rmpos.com/Order/?wci=3OLl6gTd" target="_blank" class="btn btn-red">Order Online</a>
-      </div>
-    </div>
-  </section>
+    <div class="hero-carousel">
 
-  <!-- FEATURES -->
-  <section class="section section--about">
-    <div class="container">
-      <h2 class="section-title">What We're All About</h2>
-      <div class="section-divider"></div>
-      <div class="feature-grid">
-        <div class="feature-card feature-card--video">
-          <video class="feature-video" src="assets/images/rack-attack.mp4" muted loop playsinline></video>
-          <div class="feature-card-body">
-            <h3>Elevated Bar Food</h3>
-            <p>From our famous Hangover Helper (as seen on TV!) to hand-crafted macs and smash burgers, we serve food that keeps you coming back.</p>
-          </div>
-        </div>
-        <div class="feature-card feature-card--video">
-          <video class="feature-video" src="assets/images/martini.mp4" muted loop playsinline></video>
-          <div class="feature-card-body">
-            <h3>Craft Cocktails &amp; Cold Beer</h3>
-            <p>Signature cocktails, Wisconsin craft brews on tap, and a full bar with something for everyone. Try Mama's Rum Punch!</p>
-          </div>
-        </div>
-        <div class="feature-card feature-card--video">
-          <video class="feature-video" src="assets/images/420-final.mp4" muted loop playsinline></video>
-          <div class="feature-card-body">
-            <h3>Fun For Everybody</h3>
-            <p>Live events, themed nights, and good times with great people. There's always something happening at Joe Mama's.</p>
+      <!-- SLIDE 1: Daily Specials -->
+      <div class="hero-slide active">
+        <div class="hero-content">
+          <div class="specials-layout" id="specials-layout">
+            <div class="special-card" data-day="0" style="background: linear-gradient(rgba(30,42,58,0.65), rgba(30,42,58,0.75)), url('assets/images/special-ribs.jpg') center/cover no-repeat;">
+              <div class="day">Sunday</div>
+              <div class="item">Baby Back Riiiiibs</div>
+              <div class="price">From $21.95</div>
+            </div>
+            <div class="special-card" data-day="1" style="background: linear-gradient(rgba(30,42,58,0.65), rgba(30,42,58,0.75)), url('assets/images/special-wings.jpg') center/cover no-repeat;">
+              <div class="day">Monday</div>
+              <div class="item">12 Jumbo Wings</div>
+              <div class="price">$10.95</div>
+            </div>
+            <div class="special-card" data-day="2" style="background: linear-gradient(rgba(30,42,58,0.65), rgba(30,42,58,0.75)), url('assets/images/special-tacos.jpg') center/cover no-repeat;">
+              <div class="day">Tuesday</div>
+              <div class="item">Mama's Taco Platter</div>
+              <div class="price">$14.95</div>
+            </div>
+            <div class="special-card" data-day="3" style="background: linear-gradient(rgba(30,42,58,0.65), rgba(30,42,58,0.75)), url('assets/images/special-burger.jpg') center/cover no-repeat;">
+              <div class="day">Wednesday</div>
+              <div class="item">Smash of the Day</div>
+              <div class="price">Market Price</div>
+            </div>
+            <div class="special-card" data-day="4" style="background: linear-gradient(rgba(30,42,58,0.65), rgba(30,42,58,0.75)), url('assets/images/special-chicken.jpg') center/cover no-repeat;">
+              <div class="day">Thursday</div>
+              <div class="item">Joe Joe's Fried Chicken</div>
+              <div class="price">$16.95</div>
+            </div>
+            <div class="special-card" data-day="5" style="background: linear-gradient(rgba(30,42,58,0.65), rgba(30,42,58,0.75)), url('assets/images/special-fishfry.jpg') center/cover no-repeat;">
+              <div class="day">Friday</div>
+              <div class="item">Fish Fry</div>
+              <div class="price">From $18.95</div>
+            </div>
+            <div class="special-card" data-day="6" style="background: linear-gradient(rgba(30,42,58,0.65), rgba(30,42,58,0.75)), url('assets/images/special-primerib.jpg') center/cover no-repeat;">
+              <div class="day">Saturday</div>
+              <div class="item">Prime Rib Au Jus</div>
+              <div class="price">From $31.95</div>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- SLIDE 2: What We're All About -->
+      <div class="hero-slide">
+        <div class="hero-content" style="padding-top:40px;">
+          <h2 class="hero-specials-title">What We're All About</h2>
+          <div class="section-divider" style="margin-bottom:20px;"></div>
+          <div class="feature-rotator">
+            <div class="feature-rotator-item active">
+              <h3>Elevated Bar Food</h3>
+              <p>From our famous Hangover Helper (as seen on TV!) to hand-crafted macs and smash burgers, we serve food that keeps you coming back.</p>
+            </div>
+            <div class="feature-rotator-item">
+              <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+              <p>&ldquo;Love everything about this place.&rdquo;<br><span style="color:var(--gold-light); font-size:0.85rem; font-style:normal;">&mdash; Kevin S.</span></p>
+            </div>
+            <div class="feature-rotator-item">
+              <h3>Craft Cocktails &amp; Cold Beer</h3>
+              <p>Signature cocktails, Wisconsin craft brews on tap, and a full bar with something for everyone. Try Mama's Rum Punch!</p>
+            </div>
+            <div class="feature-rotator-item">
+              <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+              <p>&ldquo;If you have never been to Joe Mama's, you are missing out on this gem. The Saturday Prime Rib special melts in your mouth and is seasoned perfectly.&rdquo;<br><span style="color:var(--gold-light); font-size:0.85rem; font-style:normal;">&mdash; Becky W.</span></p>
+            </div>
+            <div class="feature-rotator-item">
+              <h3>Fun For Everybody</h3>
+              <p>Live events, themed nights, and good times with great people. There's always something happening at Joe Mama's.</p>
+            </div>
+            <div class="feature-rotator-item">
+              <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+              <p>&ldquo;First off the food is amazing. The staff is friendly and service is quick. The atmosphere is awesome and the drinks are great.&rdquo;<br><span style="color:var(--gold-light); font-size:0.85rem; font-style:normal;">&mdash; Carl L.</span></p>
+            </div>
+            <div class="feature-rotator-item">
+              <h3>As Seen on TV</h3>
+              <p>Featured on Travel Channel's Food Paradise! Come try the dishes that put Colgate, Wisconsin on the map.</p>
+            </div>
+            <div class="feature-rotator-item">
+              <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+              <p>&ldquo;Food is absolutely delicious every time we come. It's always busy, but service is always quick and friendly! I've never disliked a dish I've had there.&rdquo;<br><span style="color:var(--gold-light); font-size:0.85rem; font-style:normal;">&mdash; Cassi B.</span></p>
+            </div>
+            <div class="feature-rotator-item">
+              <h3>Daily Specials Every Night</h3>
+              <p>Taco Tuesday, Smash Burger Wednesday, Fried Chicken Thursday, Fish Fry Friday, Prime Rib Saturday, and Ribs on Sunday. Something special every day of the week.</p>
+            </div>
+            <div class="feature-rotator-item">
+              <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+              <p>&ldquo;First time here and it won't be the last! They had a great menu with so many good dishes to choose from. The portions were generous and everything was delicious!&rdquo;<br><span style="color:var(--gold-light); font-size:0.85rem; font-style:normal;">&mdash; KVM</span></p>
+            </div>
+            <div class="feature-rotator-item">
+              <h3>Your Neighborhood Spot</h3>
+              <p>Whether you're a regular or visiting for the first time, you'll feel right at home. Colgate's favorite bar and grill since 2016.</p>
+            </div>
+            <div class="feature-rotator-item">
+              <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+              <p>&ldquo;Highly recommend a visit! Great food, great drinks. Servers &amp; service always top quality. Amazing local bar!&rdquo;<br><span style="color:var(--gold-light); font-size:0.85rem; font-style:normal;">&mdash; Michelle G.</span></p>
+            </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Static Order Online + Dot indicators -->
+    <div class="hero-buttons" style="margin-top:20px;">
+      <a href="https://onlineordering.rmpos.com/Order/?wci=3OLl6gTd" target="_blank" class="btn btn-red">Order Online</a>
+    </div>
+    <div class="hero-dots">
+      <span class="hero-dot active" data-slide="0"></span>
+      <span class="hero-dot" data-slide="1"></span>
     </div>
   </section>
 
@@ -125,7 +163,7 @@
       <div class="section-divider"></div>
       <p style="font-size:1.2rem; margin-bottom:8px;"><strong>4600 County Line Q, Colgate, WI 53017</strong></p>
       <p style="color:var(--text-light); margin-bottom:5px;">Open Daily: 11:00 AM &ndash; 12:00 AM</p>
-      <p style="color:var(--text-light); margin-bottom:20px;">Kitchen closes at 10:00 PM (9:00 PM Sundays)</p>
+      <p style="color:var(--text-light); margin-bottom:20px;">Kitchen closes at 10:00 PM<br>(9:00 PM Sundays)</p>
       <p><a href="tel:262-628-9211" style="font-size:1.3rem; font-weight:700; color:var(--gold);">262-628-9211</a></p>
       <div style="margin-top:20px;">
         <a href="contact.html" class="btn btn-primary">Get Directions</a>
@@ -146,9 +184,11 @@
           <li><a href="menu.html">Food Menu</a></li>
           <li><a href="specials.html">Daily Specials</a></li>
           <li><a href="drinks.html">Drink Menu</a></li>
+          <li><a href="catering.html">Catering</a></li>
           <li><a href="events.html">Upcoming Events</a></li>
           <li><a href="contact.html">Contact Us</a></li>
           <li><a href="https://onlineordering.rmpos.com/Order/?wci=3OLl6gTd" target="_blank">Order Online</a></li>
+          <li><a href="https://www.facebook.com/Joe-Mamas-Bar-and-Grill-1782895498598498/" target="_blank">Facebook</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -187,33 +227,87 @@
       topRow.className = 'specials-row specials-row--today';
       todayCard.classList.add('special-card--today');
       todayCard.querySelector('.day').textContent = "TODAY'S SPECIAL";
+      if (today === 2) {
+        todayCard.querySelector('.item').textContent = "Jose Mamacita's Mexican Special";
+        todayCard.querySelector('.price').textContent = "Market Price";
+      }
       topRow.appendChild(todayCard);
       layout.appendChild(topRow);
       const bottomRow = document.createElement('div');
       bottomRow.className = 'specials-row';
       otherCards.forEach(c => bottomRow.appendChild(c));
       layout.appendChild(bottomRow);
+
+      // After initial fade-in completes, lock opacity so carousel swipes don't re-trigger
+      setTimeout(() => {
+        layout.style.opacity = '1';
+        layout.style.animation = 'none';
+      }, 4000);
     })();
 
-    document.querySelectorAll('.feature-card--video').forEach(card => {
-      const video = card.querySelector('.feature-video');
-      function showVideo() {
-        card.classList.add('playing');
-        video.play();
+    // Hero carousel - swipe & dot navigation
+    (function() {
+      const carousel = document.querySelector('.hero-carousel');
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots = document.querySelectorAll('.hero-dot');
+      if (slides.length < 2) return;
+      let current = 0;
+      let animating = false;
+
+      function goTo(idx, direction) {
+        if (idx === current || animating) return;
+        animating = true;
+        const outClass = direction === 'left' ? 'swipe-out-left' : 'swipe-out-right';
+        const inClass = direction === 'left' ? 'swipe-in-right' : 'swipe-in-left';
+        slides[current].classList.remove('active');
+        slides[current].classList.add(outClass);
+        slides[idx].classList.add(inClass);
+        setTimeout(() => {
+          slides[current].classList.remove(outClass);
+          slides[idx].classList.remove(inClass);
+          slides[idx].classList.add('active');
+          current = idx;
+          dots.forEach((d, i) => d.classList.toggle('active', i === current));
+          animating = false;
+        }, 350);
       }
-      function hideVideo() {
-        card.classList.remove('playing');
-        video.pause();
-        video.currentTime = 0;
-      }
-      card.addEventListener('mouseenter', showVideo);
-      card.addEventListener('mouseleave', hideVideo);
-      card.addEventListener('touchstart', (e) => {
-        e.preventDefault();
-        if (card.classList.contains('playing')) hideVideo();
-        else showVideo();
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const idx = parseInt(dot.dataset.slide);
+          goTo(idx, idx > current ? 'left' : 'right');
+        });
       });
-    });
+
+      // Auto-slide once, 5 seconds after specials finish fading in (fade ends ~4.5s)
+      setTimeout(() => { goTo(1, 'left'); }, 9500);
+
+      // Touch swipe
+      let startX = 0;
+      carousel.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+      carousel.addEventListener('touchend', e => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0 && current < slides.length - 1) goTo(current + 1, 'left');
+          else if (diff < 0 && current > 0) goTo(current - 1, 'right');
+        }
+      }, { passive: true });
+    })();
+
+    // Feature rotator - cycle through content in single card
+    (function() {
+      const items = document.querySelectorAll('.feature-rotator-item');
+      if (items.length < 2) return;
+      let current = 0;
+      setInterval(() => {
+        items[current].classList.remove('active');
+        const next = (current + 1) % items.length;
+        setTimeout(() => {
+          items[next].classList.add('active');
+          current = next;
+        }, 1500);
+      }, 6000);
+    })();
   </script>
 </body>
 </html>
