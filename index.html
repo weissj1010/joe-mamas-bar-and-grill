@@ -289,26 +289,14 @@
 
     // Feature rotator - cycle through content in single card
     (function() {
-      const rotator = document.querySelector('.feature-rotator');
       const items = document.querySelectorAll('.feature-rotator-item');
       if (items.length < 2) return;
       let current = 0;
-
-      function sizeToActive(item) {
-        var pad = parseFloat(getComputedStyle(rotator).paddingTop) + parseFloat(getComputedStyle(rotator).paddingBottom);
-        rotator.style.height = (item.scrollHeight + pad) + 'px';
-      }
-
-      // Set initial size
-      sizeToActive(items[0]);
-      window.addEventListener('resize', () => sizeToActive(items[current]));
-
       setInterval(() => {
         items[current].classList.remove('active');
         const next = (current + 1) % items.length;
         setTimeout(() => {
           items[next].classList.add('active');
-          sizeToActive(items[next]);
           current = next;
         }, 1500);
       }, 6000);

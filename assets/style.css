@@ -348,19 +348,20 @@ nav .order-btn:hover {
   flex-shrink: 0;
   margin: 0 auto;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  overflow: hidden;
-  transition: height 0.5s ease;
 }
 .feature-rotator-item {
   position: absolute;
-  top: 30px;
-  left: 28px;
-  right: 28px;
+  top: 0; left: 0; right: 0;
+  padding: 30px 28px;
   opacity: 0;
   transition: opacity 0.8s ease;
+  pointer-events: none;
 }
 .feature-rotator-item.active {
+  position: relative;
+  padding: 0;
   opacity: 1;
+  pointer-events: auto;
 }
 .feature-rotator-item h3 {
   font-family: Georgia, 'Times New Roman', serif;
@@ -920,9 +921,10 @@ footer {
     padding: 20px 18px;
   }
   .feature-rotator-item {
-    top: 20px;
-    left: 18px;
-    right: 18px;
+    padding: 20px 18px;
+  }
+  .feature-rotator-item.active {
+    padding: 0;
   }
   .feature-rotator-item h3 { font-size: 1.15rem; margin-bottom: 8px; }
   .feature-rotator-item p { font-size: 0.9rem; line-height: 1.5; }
