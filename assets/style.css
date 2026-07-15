@@ -337,7 +337,7 @@ nav .order-btn:hover {
 
 /* Feature rotator - single glass card with cycling content */
 .feature-rotator {
-  display: grid;
+  position: relative;
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -345,11 +345,15 @@ nav .order-btn:hover {
   border-radius: 14px;
   padding: 30px 28px;
   max-width: 500px;
+  min-height: 180px;
   margin: 0 auto;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 .feature-rotator-item {
-  grid-area: 1 / 1;
+  position: absolute;
+  top: 30px;
+  left: 28px;
+  right: 28px;
   opacity: 0;
   transition: opacity 0.8s ease;
 }
@@ -911,12 +915,10 @@ footer {
   .special-card .price { white-space: normal; }
 
   .feature-rotator {
-    position: relative;
     padding: 20px 18px;
     min-height: 160px;
   }
   .feature-rotator-item {
-    position: absolute;
     top: 20px;
     left: 18px;
     right: 18px;
