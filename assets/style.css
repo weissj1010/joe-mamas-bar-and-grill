@@ -777,7 +777,8 @@ nav .order-btn:hover {
   font-size: 0.9rem;
 }
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
   width: 100%;
   padding: 12px 14px;
   border: 2px solid var(--cream-dark);
@@ -788,10 +789,19 @@ nav .order-btn:hover {
   background: var(--cream);
 }
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
   outline: none;
   border-color: var(--gold);
   background: var(--white);
+}
+.form-group select {
+  appearance: auto;
+  cursor: pointer;
+}
+.form-group input[type="file"] {
+  padding: 10px 14px;
+  cursor: pointer;
 }
 .form-group textarea { resize: vertical; min-height: 120px; }
 
