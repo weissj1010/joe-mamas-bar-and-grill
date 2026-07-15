@@ -123,10 +123,11 @@ nav .order-btn:hover {
 
 /* ===== HERO ===== */
 .hero {
+  position: relative;
   background: linear-gradient(rgba(30,42,58,0.85), rgba(30,42,58,0.9)), url('images/sunset.jpg') center/cover no-repeat;
   color: var(--white);
   text-align: center;
-  padding: 20px 20px 30px;
+  padding: 20px 20px 100px;
   min-height: calc(100vh - 120px);
   min-height: calc(100dvh - 120px);
   display: flex;
@@ -136,6 +137,13 @@ nav .order-btn:hover {
   gap: 20px;
   overflow: hidden;
 }
+.hero > .hero-buttons,
+.hero > .hero-dots {
+  position: absolute;
+  left: 0; right: 0;
+}
+.hero > .hero-buttons { bottom: 50px; }
+.hero > .hero-dots { bottom: 15px; }
 
 .hero-content {
   padding-top: 100px;
