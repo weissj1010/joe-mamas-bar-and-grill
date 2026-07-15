@@ -345,9 +345,11 @@ nav .order-btn:hover {
   border-radius: 14px;
   padding: 30px 28px;
   max-width: 500px;
-  min-height: 250px;
+  height: 200px;
+  flex-shrink: 0;
   margin: 0 auto;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  overflow: hidden;
 }
 .feature-rotator-item {
   position: absolute;
@@ -916,7 +918,7 @@ footer {
 
   .feature-rotator {
     padding: 20px 18px;
-    min-height: 250px;
+    height: 220px;
   }
   .feature-rotator-item {
     top: 20px;
