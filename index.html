@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joe Mama's Bar & Grill | Colgate, WI</title>
   <meta name="description" content="Your new favorite neighborhood bar in Colgate, WI. Top notch service and elevated bar food. Call 262-628-9211.">
-  <link rel="stylesheet" href="assets/style.css?v=5">
+  <link rel="stylesheet" href="assets/style.css?v=9">
   <link rel="icon" href="assets/images/logo.png">
 </head>
 <body>
@@ -287,18 +287,15 @@
       }, { passive: true });
     })();
 
-    // Feature rotator - cycle through content in single card
+    // Feature rotator - crossfade through content in single card
     (function() {
       const items = document.querySelectorAll('.feature-rotator-item');
       if (items.length < 2) return;
       let current = 0;
       setInterval(() => {
         items[current].classList.remove('active');
-        const next = (current + 1) % items.length;
-        setTimeout(() => {
-          items[next].classList.add('active');
-          current = next;
-        }, 1500);
+        current = (current + 1) % items.length;
+        items[current].classList.add('active');
       }, 6000);
     })();
   </script>

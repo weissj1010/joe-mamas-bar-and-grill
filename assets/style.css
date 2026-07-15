@@ -129,11 +129,10 @@ nav .order-btn:hover {
   text-align: center;
   height: calc(100vh - 120px);
   height: calc(100dvh - 120px);
-  overflow: hidden;
 }
 
 .hero-content {
-  padding-top: 100px;
+  padding-top: 20px;
 }
 
 .hero-content h1 {
@@ -172,14 +171,18 @@ nav .order-btn:hover {
   margin-bottom: 10px;
 }
 
-/* Hero carousel */
+/* Hero carousel — absolute with hard bottom boundary, overflow clips content */
 .hero-carousel {
   position: absolute;
-  top: 50%;
-  left: 20px;
-  right: 20px;
-  transform: translateY(-50%);
-  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 80px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
 }
 
 .hero-slide {
@@ -228,12 +231,22 @@ nav .order-btn:hover {
   to { transform: translateX(0); opacity: 1; }
 }
 
-.hero-dots {
+/* Button + dots — positioned in the reserved 80px zone at bottom */
+.hero-buttons {
   position: absolute;
-  bottom: 15px;
+  bottom: 30px;
   left: 0;
   right: 0;
-  z-index: 3;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.hero-dots {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -249,17 +262,6 @@ nav .order-btn:hover {
 .hero-dot.active {
   background: var(--gold);
   transform: scale(1.2);
-}
-
-.hero-buttons {
-  position: absolute;
-  bottom: 50px;
-  left: 0;
-  right: 0;
-  z-index: 3;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
 }
 
 .btn {
@@ -351,7 +353,7 @@ nav .order-btn:hover {
 
 /* Feature rotator - single glass card with cycling content */
 .feature-rotator {
-  position: relative;
+  display: grid;
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -364,16 +366,12 @@ nav .order-btn:hover {
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 .feature-rotator-item {
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  padding: 30px 28px;
+  grid-area: 1 / 1;
   opacity: 0;
   transition: opacity 0.8s ease;
   pointer-events: none;
 }
 .feature-rotator-item.active {
-  position: relative;
-  padding: 0;
   opacity: 1;
   pointer-events: auto;
 }
@@ -896,9 +894,11 @@ footer {
   .info-bar-dash { display: none; }
 
   .hero { height: calc(100vh - 120px); height: calc(100dvh - 120px); }
-  .hero-carousel { left: 10px; right: 10px; }
+  .hero-carousel { padding: 0 10px; bottom: 70px; }
   .hero-content { padding-top: 5px; }
+  .hero-buttons { bottom: 25px; }
   .hero-buttons .btn { padding: 10px 24px; }
+  .hero-dots { bottom: 5px; }
   .specials-layout { max-width: 100%; overflow: hidden; gap: 8px; }
   .specials-row--today { justify-content: center; margin-bottom: 0; }
   .specials-row { gap: 6px; }
@@ -933,18 +933,10 @@ footer {
   .feature-rotator {
     padding: 20px 18px;
   }
-  .feature-rotator-item {
-    padding: 20px 18px;
-  }
-  .feature-rotator-item.active {
-    padding: 0;
-  }
   .feature-rotator-item h3 { font-size: 1.15rem; margin-bottom: 8px; }
   .feature-rotator-item p { font-size: 0.9rem; line-height: 1.5; }
 
-  .hero-buttons { bottom: 40px; flex-direction: column; align-items: center; gap: 10px; }
-  .hero-dots { bottom: 10px; }
-  .hero-buttons .btn { width: 100%; max-width: 280px; text-align: center; }
+  .hero-buttons .btn { width: 80%; max-width: 280px; text-align: center; }
 
   .contact-grid { grid-template-columns: 1fr; }
 
