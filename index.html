@@ -47,8 +47,15 @@
   <section class="hero">
     <div class="hero-carousel">
 
-      <!-- SLIDE 1: Daily Specials -->
+      <!-- SLIDE 0: Labor Day -->
       <div class="hero-slide active">
+        <div class="hero-content" style="display:flex; align-items:center; justify-content:center; height:100%; padding-bottom:60px;">
+          <img src="assets/images/Labor%20Day.jpeg" alt="Joe Mama's Labor Day Specials" style="max-height:calc(100% - 20px); max-width:90%; object-fit:contain; border-radius:14px;">
+        </div>
+      </div>
+
+      <!-- SLIDE 1: Daily Specials -->
+      <div class="hero-slide">
         <div class="hero-content">
           <div class="specials-layout" id="specials-layout">
             <div class="special-card" data-day="0" style="background: linear-gradient(rgba(30,42,58,0.65), rgba(30,42,58,0.75)), url('assets/images/special-ribs.jpg') center/cover no-repeat;">
@@ -149,6 +156,7 @@
     <div class="hero-dots">
       <span class="hero-dot active" data-slide="0"></span>
       <span class="hero-dot" data-slide="1"></span>
+      <span class="hero-dot" data-slide="2"></span>
     </div>
   </section>
 
@@ -284,11 +292,9 @@
       otherCards.forEach(c => bottomRow.appendChild(c));
       layout.appendChild(bottomRow);
 
-      // After initial fade-in completes, lock opacity so carousel swipes don't re-trigger
-      setTimeout(() => {
-        layout.style.opacity = '1';
-        layout.style.animation = 'none';
-      }, 4000);
+      // Don't start fade-in until specials slide is shown
+      layout.style.animation = 'none';
+      layout.style.opacity = '0';
     })();
 
     // Hero carousel - swipe & dot navigation
@@ -315,6 +321,17 @@
           current = idx;
           dots.forEach((d, i) => d.classList.toggle('active', i === current));
           animating = false;
+          // Trigger specials fade-in when slide 1 (specials) becomes active
+          if (idx === 1) {
+            var layout = document.getElementById('specials-layout');
+            if (layout && layout.style.opacity === '0') {
+              layout.style.animation = 'heroFadeIn 3s ease-out forwards';
+              setTimeout(function() {
+                layout.style.opacity = '1';
+                layout.style.animation = 'none';
+              }, 3500);
+            }
+          }
         }, 350);
       }
 
@@ -325,8 +342,9 @@
         });
       });
 
-      // Auto-slide once, 5 seconds after specials finish fading in (fade ends ~4.5s)
-      setTimeout(() => { goTo(1, 'left'); }, 9500);
+      // Auto-slide: Labor Day → Specials after 5s, then Specials → About after 12s
+      setTimeout(() => { goTo(1, 'left'); }, 5000);
+      setTimeout(() => { goTo(2, 'left'); }, 17000);
 
       // Touch swipe
       let startX = 0;
