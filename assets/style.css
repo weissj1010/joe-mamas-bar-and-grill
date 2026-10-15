@@ -267,12 +267,22 @@ nav .order-btn:hover {
   text-align: center;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
+.gofundme-inner {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  text-align: left;
+}
 .gofundme-photo {
-  width: 100%;
+  width: 280px;
+  min-width: 280px;
   border-radius: 10px;
-  margin-bottom: 16px;
   object-fit: cover;
-  max-height: 200px;
+  height: 200px;
+}
+.gofundme-body {
+  flex: 1;
+  text-align: center;
 }
 .gofundme-text {
   color: var(--cream);
