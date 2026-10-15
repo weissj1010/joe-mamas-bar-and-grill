@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joe Mama's Bar & Grill | Colgate, WI</title>
   <meta name="description" content="Your new favorite neighborhood bar in Colgate, WI. Top notch service and elevated bar food. Call 262-628-9211.">
-  <link rel="stylesheet" href="assets/style.css?v=20">
+  <link rel="stylesheet" href="assets/style.css?v=21">
   <link rel="icon" href="assets/images/logo.png">
 </head>
 <body>
@@ -47,8 +47,18 @@
   <section class="hero">
     <div class="hero-carousel">
 
-      <!-- SLIDE 0: Daily Specials -->
+      <!-- SLIDE 0: Holiday Closures -->
       <div class="hero-slide active">
+        <a href="#" class="hero-slide-image-link">
+          <picture>
+            <source media="(max-width: 768px)" srcset="assets/images/holiday-closures-mobile.png">
+            <img src="assets/images/holiday-closures.png" alt="Holiday Closures - Closed Monday November 16, Closed Thanksgiving November 26" class="hero-slide-img">
+          </picture>
+        </a>
+      </div>
+
+      <!-- SLIDE 1: Daily Specials -->
+      <div class="hero-slide">
         <div class="hero-content">
           <div class="specials-layout" id="specials-layout">
             <div class="special-card" data-day="0" style="background: linear-gradient(rgba(30,42,58,0.65), rgba(30,42,58,0.75)), url('assets/images/special-ribs.jpg') center/cover no-repeat;">
@@ -83,7 +93,7 @@
         </div>
       </div>
 
-      <!-- SLIDE 1: What We're All About -->
+      <!-- SLIDE 2: What We're All About -->
       <div class="hero-slide">
         <div class="hero-content">
           <h2 class="hero-specials-title">What We're All About</h2>
@@ -149,6 +159,7 @@
     <div class="hero-dots">
       <span class="hero-dot active" data-slide="0"></span>
       <span class="hero-dot" data-slide="1"></span>
+      <span class="hero-dot" data-slide="2"></span>
     </div>
   </section>
 
@@ -323,8 +334,9 @@
         });
       });
 
-      // Auto-slide: Specials → About after 12s
-      setTimeout(() => { goTo(1, 'left'); }, 12000);
+      // Auto-slide: Holiday Closures → Specials after 8s, then Specials → About after 12s more
+      setTimeout(() => { goTo(1, 'left'); }, 8000);
+      setTimeout(() => { goTo(2, 'left'); }, 20000);
 
       // Touch swipe
       let startX = 0;

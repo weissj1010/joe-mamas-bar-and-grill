@@ -234,6 +234,20 @@ nav .order-btn:hover {
   to { transform: translateX(0); opacity: 1; }
 }
 
+/* Hero image slide — full-bleed banner */
+.hero-slide-image-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.hero-slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 /* Button + dots — positioned in the reserved 80px zone at bottom */
 .hero-buttons {
   position: absolute;
