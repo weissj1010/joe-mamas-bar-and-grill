@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joe Mama's Bar & Grill | Colgate, WI</title>
   <meta name="description" content="Your new favorite neighborhood bar in Colgate, WI. Top notch service and elevated bar food. Call 262-628-9211.">
-  <link rel="stylesheet" href="assets/style.css?v=21">
+  <link rel="stylesheet" href="assets/style.css?v=22">
   <link rel="icon" href="assets/images/logo.png">
 </head>
 <body>
@@ -57,7 +57,20 @@
         </a>
       </div>
 
-      <!-- SLIDE 1: Daily Specials -->
+      <!-- SLIDE 1: GoFundMe - Help One of Our Own -->
+      <div class="hero-slide">
+        <div class="hero-content gofundme-slide">
+          <h2 class="hero-specials-title">Help One of Our Own</h2>
+          <div class="section-divider" style="margin-bottom:16px;"></div>
+          <div class="gofundme-card">
+            <p class="gofundme-text">Our Joe Mama's family member Pablo and his wife are facing a liver cancer diagnosis. With a one-year-old daughter at home and frequent treatment trips to Madison, the costs are adding up fast.</p>
+            <p class="gofundme-text" style="margin-top:12px;">Every dollar helps cover travel, lost wages, and household bills so they can focus on what matters most &mdash; being together and fighting this.</p>
+            <a href="https://www.gofundme.com/f/help-one-of-our-own-h9vc9" target="_blank" rel="noopener noreferrer" class="btn btn-gofundme" style="margin-top:20px;">Donate Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2: Daily Specials -->
       <div class="hero-slide">
         <div class="hero-content">
           <div class="specials-layout" id="specials-layout">
@@ -93,7 +106,7 @@
         </div>
       </div>
 
-      <!-- SLIDE 2: What We're All About -->
+      <!-- SLIDE 3: What We're All About -->
       <div class="hero-slide">
         <div class="hero-content">
           <h2 class="hero-specials-title">What We're All About</h2>
@@ -160,6 +173,7 @@
       <span class="hero-dot active" data-slide="0"></span>
       <span class="hero-dot" data-slide="1"></span>
       <span class="hero-dot" data-slide="2"></span>
+      <span class="hero-dot" data-slide="3"></span>
     </div>
   </section>
 
@@ -334,9 +348,10 @@
         });
       });
 
-      // Auto-slide: Holiday Closures → Specials after 8s, then Specials → About after 12s more
+      // Auto-slide through all slides
       setTimeout(() => { goTo(1, 'left'); }, 8000);
-      setTimeout(() => { goTo(2, 'left'); }, 20000);
+      setTimeout(() => { goTo(2, 'left'); }, 18000);
+      setTimeout(() => { goTo(3, 'left'); }, 30000);
 
       // Touch swipe
       let startX = 0;
